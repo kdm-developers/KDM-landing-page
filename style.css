@@ -67,7 +67,7 @@ transform-origin: left;
 
 @keyframes fade-in-left{
     0% {opacity: 0; transform: translateX(50px);}
-    25% {opacity: 1; transform: translateX(0);}
+    35% {opacity: 1; transform: translateX(0);}
     75% {opacity: 1; transform: translateX(0);}
     100% {opacity: 0; transform: translateX(50px);}
 }
@@ -79,7 +79,7 @@ transform-origin: left;
 
 @keyframes fade-in-right{
     0% {opacity: 0; transform: translateX(-50px);}
-    25% {opacity: 1; transform: translateX(0);}
+    35% {opacity: 1; transform: translateX(0);}
     75% {opacity: 1; transform: translateX(0);}
     100% {opacity: 0; transform: translateX(-50px);}
 }
@@ -91,7 +91,7 @@ transform-origin: left;
 
 @keyframes fade-in-top{
     0% {opacity: 0; transform: translateY(-50px);}
-    25% {opacity: 1; transform: translateY(0);}
+    35% {opacity: 1; transform: translateY(0);}
     75% {opacity: 1; transform: translateY(0);}
     100% {opacity: 0; transform: translateY(-50px);}
 }
@@ -103,7 +103,7 @@ transform-origin: left;
 
 @keyframes fade-in-down{
     0% {opacity: 0; transform: translateY(50px);}
-    25% {opacity: 1; transform: translateY(0);}
+    35% {opacity: 1; transform: translateY(0);}
     75% {opacity: 1; transform: translateY(0);}
     100% {opacity: 0; transform: translateY(50px);}
 }
@@ -115,7 +115,7 @@ transform-origin: left;
 
 @keyframes fade-in{
     0% {scale: .8; opacity: 0;}
-    25% {scale: 1; opacity: 1;}
+    35% {scale: 1; opacity: 1;}
     75% {scale: 1; opacity: 1;}
     100% {scale: .8; opacity: 0;}
 }
@@ -541,19 +541,24 @@ fade to the down
 
     /* scrollbar */
 ::-webkit-scrollbar{
-  width: 10px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track{
-  background: #039930;
+  background: #cccccc;
+}
+
+::-webkit-scrollbar-track:hover{
+  background: #59685c;
+
 }
 
 ::-webkit-scrollbar-thumb{
-  background: #aaff00;
+  background: #516133;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-  background: #729b00;
+  background: #d4ff5e;
 }
 
 ::-webkit-scrollbar-corner{
