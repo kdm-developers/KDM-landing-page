@@ -148,8 +148,8 @@ transform-origin: left;
     60% {scale: 1; opacity: 1; transform: translateY(108px);}
     70% {scale: 1; opacity: 1; transform: translateY(216px);}
     80% {scale: 1; opacity: 1; transform: translateY(324px);}
-    90% {scale: .8; opacity: 0; transform: translateY(432px);}
-    100% {scale: .8; opacity: 0; transform: translateY(540px);}
+    90% {scale: 0.8; opacity: 0; transform: translateY(432px);}
+    100% {scale: 0.8; opacity: 0; transform: translateY(540px);}
 }
 
 .stickt{
@@ -318,11 +318,16 @@ section:not(.hero) {
 }
 
 .itemgalery {
-    background-color: rgba(49, 73, 21, 0.199);
+    background-color: rgba(221, 221, 221, 0.685);
     padding: 25px;
     border-radius: 0px;
     width: 20%;
     box-shadow: 1px 1px 1px black;
+}
+.itemgalery:hover{
+    scale: 1.05;
+    background-color: rgb(221, 221, 221, 0.900);
+    color: rgb(80, 80, 80);
 }
 
 .itemgalery img {
