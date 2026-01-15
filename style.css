@@ -215,6 +215,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    text-align: center;
 }
 
 .portfolio-item {
@@ -405,41 +406,65 @@ section {
     to { scale: 1 1; }
 }
 
-.fadeintop, .fadeinleft, .fadeinright, .fadeindown, .fadeinsizeup {
-    opacity: 0;
-    animation: fade-in-animation linear forwards;
+.fadeinleft{
+    animation: fade-in-left linear;
     animation-timeline: view();
-    animation-range-start: entry 10%;
-    animation-range-end: exit 40%;
 }
 
-@keyframes fade-in-animation {
-    to {
-        opacity: 1;
-        transform: none;
-    }
+@keyframes fade-in-left{
+    0% {opacity: 0; transform: translateX(50px);}
+    35% {opacity: 1; transform: translateX(0);}
+    75% {opacity: 1; transform: translateX(0);}
+    100% {opacity: 0; transform: translateX(50px);}
 }
 
-.fadeintop {
-    transform: translateY(-50px);
+.fadeinright{
+    animation: fade-in-right linear;
+    animation-timeline: view();
 }
 
-.fadeinleft {
-    transform: translateX(-50px);
+@keyframes fade-in-right{
+    0% {opacity: 0; transform: translateX(-50px);}
+    35% {opacity: 1; transform: translateX(0);}
+    75% {opacity: 1; transform: translateX(0);}
+    100% {opacity: 0; transform: translateX(-50px);}
 }
 
-.fadeinright {
-    transform: translateX(50px);
+.fadeintop{
+    animation: fade-in-top linear;
+    animation-timeline: view();
 }
 
-.fadeindown {
-    transform: translateY(50px);
+@keyframes fade-in-top{
+    0% {opacity: 0; transform: translateY(-50px);}
+    35% {opacity: 1; transform: translateY(0);}
+    75% {opacity: 1; transform: translateY(0);}
+    100% {opacity: 0; transform: translateY(-50px);}
 }
 
-.fadeinsizeup {
-    transform: scale(0.8);
+.fadeindown{
+    animation: fade-in-down linear;
+    animation-timeline: view();
 }
 
+@keyframes fade-in-down{
+    0% {opacity: 0; transform: translateY(50px);}
+    35% {opacity: 1; transform: translateY(0);}
+    75% {opacity: 1; transform: translateY(0);}
+    100% {opacity: 0; transform: translateY(50px);}
+}
+
+.fadeinsizeup{
+    animation: fade-in linear;
+    animation-timeline: view();
+}
+
+@keyframes fade-in{
+    0% {scale: .8; opacity: 0;}
+    35% {scale: 1; opacity: 1;}
+    75% {scale: 1; opacity: 1;}
+    100% {scale: .8; opacity: 0;}
+}
 
 
 
@@ -496,37 +521,34 @@ section {
 
 
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-
-
+        padding-top: 25px;
+        line-height: 10px;
+        padding-bottom: 25px;
     }
 
-
-
-
-
+    .nav-links li::before{
+    content: '';
+	position: absolute;
+	left:0;
+	bottom: 0;
+	background-color: #00FF15;
+	height: 2px;
+	box-sizing: border-box;
+	width: 100%;
+}
+    
+.nav-links a:hover {
+    border-top: solid var(--dark-color) 1px;
+    border-bottom: solid var(--dark-color) 1px;
+}
+    
     .nav-links.active {
-
-
+        
+        
         left: 0;
-
-
+        
+        
     }
-
-
-
-
-
-    .nav-links li {
-
-
-        padding: 1.5rem 0;
-
-
-    }
-
-
-
-
 
     .hamburger {
 
