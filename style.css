@@ -466,60 +466,191 @@ section {
     100% {scale: .8; opacity: 0;}
 }
 
-
-
-
 /* --- Responsive --- */
 
 
 @media (max-width: 992px) {
 
-
-    .about-content {
-
-
+.about-content {
         grid-template-columns: 1fr;
-
-
-    }
-
-
+}
 }
 
+/* modal project */
+.modproj1,
+.modproj2,
+.modproj3 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  -webkit-animation-name: modalfadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: modalfadeIn;
+  animation-duration: 0.4s
+}
 
+.modprojcont1,
+.modprojcont2,
+.modprojcont3 {
+  position: fixed;
+  top: 40%;
+  background-color: #fefefe;
+  width: 30%;
+  height: auto;
+}
 
+.close1,
+.close2,
+.close3 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
+.modhead {
+  padding: 2px 16px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.modbody {
+    padding: 2px 16px;
+}
+
+.modfoot {
+  padding: 2px 16px;
+  background-color: #4CAF50;
+  color: white;
+  bottom: 0;
+}
+
+@-webkit-keyframes modalfadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes modalfadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+/* modal project */
+
+/* modal profile  */
+.modprof1,
+.modprof2,
+.modprof3,
+.modprof4,
+.modprof5,
+.modprof6 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  -webkit-animation-name: modalfadeIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: modalfadeIn;
+  animation-duration: 0.4s
+}
+
+.modprofcont1,
+.modprofcont2,
+.modprofcont3,
+.modprofcont4,
+.modprofcont5,
+.modprofcont6 {
+  position: fixed;
+  top: 40%;
+  background-color: #fefefe;
+  width: 30%;
+  height: auto;
+}
+
+.closeprof1,
+.closeprof2,
+.closeprof3,
+.closeprof4,
+.closeprof5,
+.closeprof6 {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.profmodalimg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.modheadprof {
+  padding: 2px 16px;
+  background-color: #4CAF50;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modbodyprof {
+    padding: 2px 16px;
+}
+
+.modfootprof {
+  padding: 2px 16px;
+  background-color: #4CAF50;
+  color: white;
+  bottom: 0;
+}
+
+/* modal profile  */
 
 @media (max-width: 768px) {
 
+    .modprojcont1,
+    .modprojcont2,
+    .modprojcont3,
+    .modprofcont1,
+    .modprofcont2,
+    .modprofcont3,
+    .modprofcont4,
+    .modprofcont5,
+    .modprofcont6 {
+        width: 60%;
+    }
+
 
     .nav-links {
-
-
         position: absolute;
-
-
         left: -100%;
-
-
         top: 5rem;
-
-
         flex-direction: column;
-
-
         background-color: var(--light-color);
-
-
         width: 100%;
-
-
         text-align: center;
-
-
         transition: 0.3s;
-
-
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding-top: 25px;
         line-height: 10px;
@@ -543,111 +674,40 @@ section {
 }
     
     .nav-links.active {
-        
-        
         left: 0;
-        
-        
     }
 
     .hamburger {
-
-
         display: block;
-
-
     }
-
-
-
-
 
     .hamburger.active .bar:nth-child(2) {
-
-
         opacity: 0;
-
-
     }
-
-
-
-
 
     .hamburger.active .bar:nth-child(1) {
-
-
         transform: translateY(8px) rotate(45deg);
-
-
     }
-
-
-
-
 
     .hamburger.active .bar:nth-child(3) {
-
-
         transform: translateY(-8px) rotate(-45deg);
-
-
     }
-
-
-
-
 
     .hero-title {
-
-
         font-size: 3rem;
-
-
     }
-
-
-
-
 
     .hero-subtitle {
-
-
         font-size: 1.2rem;
-
-
     }
-
-
-
-
 
     .services-grid,
-
-
     .portfolio-grid,
-
-
     .team-grid {
-
-
         grid-template-columns: 1fr;
-
-
     }
-
-
-
-
 
     .footer-content {
-
-
         grid-template-columns: 1fr;
-
-
     }
-
-
 }
-
