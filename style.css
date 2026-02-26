@@ -582,8 +582,11 @@ section {
   position: fixed;
   top: 40%;
   background-color: #fefefe;
-  width: 30%;
-  height: auto;
+  width: 50%;
+  height: 30%;
+  border-radius: 15px 15px 15px 15px;
+  border-top: #00FF15 1px solid;
+  border-bottom: #00FF15 1px solid;
 }
 
 .closeprof1,
@@ -594,24 +597,27 @@ section {
 .closeprof6 {
   color: white;
   float: right;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
   cursor: pointer;
 }
 
 .profmodalimg {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 .modheadprof {
   padding: 2px 16px;
+  height: 30%;
   background-color: #4CAF50;
   color: white;
   display: flex;
   justify-content: space-between;
+  border-radius: 15px 15px 0 0;
+  border-bottom: #00FF15 1px solid;
 }
 
 .modbodyprof {
@@ -622,7 +628,11 @@ section {
   padding: 2px 16px;
   background-color: #4CAF50;
   color: white;
+  position: absolute;
+  width: 100%;
   bottom: 0;
+  border-radius: 0 0 15px 15px;
+  border-top: #00FF15 1px solid;
 }
 
 /* modal profile  */
