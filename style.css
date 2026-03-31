@@ -503,7 +503,7 @@ section {
 .modprojcont2,
 .modprojcont3 {
   position: fixed;
-  top: 40%;
+  top: 20%;
   background-color: #fefefe;
   width: 30%;
   height: auto;
@@ -527,6 +527,12 @@ section {
 
 .modbody {
     padding: 2px 16px;
+}
+
+.modbody img{
+    /* position: fixed; */
+    width: 100%;
+    height: 100%;
 }
 
 .modfoot {
